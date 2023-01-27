@@ -106,15 +106,12 @@ a {
 
 /* ==================Hero================== */
 
-.hero-wrap {
+.hero {
     position: relative;
     display: flex;
     flex-direction: column;
     background: #e6f0ff;
     height: calc(100vh - 90px);
-}
-
-.hero {
     margin-top: 130px;
 }
 
