@@ -6,6 +6,11 @@
     --primary-color: #0f1b4c;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -110,12 +115,9 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background: #e6f0ff;
     height: calc(100vh - 90px);
-}
-
-.hero .content {
-    margin-top: 130px;
 }
 
 .hero .info {
