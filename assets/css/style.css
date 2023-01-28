@@ -112,6 +112,9 @@ a {
     flex-direction: column;
     background: #e6f0ff;
     height: calc(100vh - 90px);
+}
+
+.hero .content {
     margin-top: 130px;
 }
 
