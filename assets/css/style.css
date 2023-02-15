@@ -58,7 +58,7 @@ a {
 
 /* ==================Header================== */
 
-.neo-header {
+.header.neo {
     background: #e6f0ff;
     padding-top: 26px;
     position: sticky;
@@ -334,8 +334,7 @@ a {
     height: 227px;
     width: 100%;
     object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 12px 12px 0px 0px;
 }
 
 .featured .item .body {
