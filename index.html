@@ -36,25 +36,35 @@
         
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-            <!-- Header -->
+
+            <!-- PC header -->
             <header class="header neo">
                 <div class="content">
 
                     <!-- Navbar -->
                     <nav class="navbar">
+                        <!-- Tablet/mobile menu -->
+                        <label for="menu-checkbox" class="toggle-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                            </svg>
+                        </label>
 
                         <!-- Logo -->
-                        <a href="#"><img src="./assets/img/logo.svg" alt="Besnik" /></a>
+                        <a href="#"><img src="./assets/img/logo.svg" alt="Besnik" class="logo"/></a>
 
                         <!-- Navigation -->
-                        <ul>
+                        <ul id="pc-nav">
                             <li><a href="#">Home</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#features">Features</a></li>
                             <li><a href="#resources">Resources</a></li>
                             <li><a href="#contact">Contact</a></li>
+                            <li class="show-on-mobile separate"><a href="#!">Sign in</a></li>
+                            <li class="show-on-mobile"><a href="#!">Sign up</a></li>
                         </ul>
 
                         <!-- Action -->
@@ -64,6 +74,31 @@
                         </div>
                     </nav>
                 </div>
+            </header>
+
+            <!-- Tablet/mobile header -->
+            <header class="mobile-header">
+                <!-- Check box -->
+                <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+
+                <!-- Overlay -->
+                <label for="menu-checkbox" class="menu-overlay"></label>
+
+                <!-- Menu-content -->
+                <label for="menu-checkbox" class="menu-drawer">
+                    <!-- Logo -->
+                    <a href="#"><img src="./assets/img/logo.svg" alt="Besnik"/></a>
+                    
+                    <!-- Navigation -->
+                    <ul id="mobile-nav"></ul>
+                    <script>
+                        const pcNav = document.querySelector("#pc-nav");
+                        const mobileNav = document.querySelector("#mobile-nav");
+
+                        // Copy form PC nav > Mobile nav
+                        mobileNav.innerHTML = pcNav.innerHTML;
+                    </script>
+                </label>
             </header>
 
             <main>             
@@ -112,7 +147,7 @@
                         <p class="desc">
                             More than 45,000+ companies trust besnik
                         </p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                     </div>
                     <div class="image-clients">
                         <a href="#!">
@@ -350,6 +385,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="view-all show-on-mobile">
+                        <a href="#!" class="btn">View All Properties</a>
                     </div>
                 </div>
             </div>
@@ -623,7 +662,7 @@
 
                     <!-- Logo -->
                     <div class="row row-bottom">
-                        <img src="./assets/img/logo.svg" alt="Logo" class="logo">
+                        <img src="./assets/img/logo.svg" alt="Logo" class="footer-logo">
                         <p class="copyright">Copyright 2020.com, All rights reserved.</p>
                     </div>
                     
